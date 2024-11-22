@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
-        android:title="Item"
+        android:id="@+id/cursos"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Cursos"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/meusCursos"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Meus Cursos"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/progresso"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Progresso"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/perfil"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Perfil"
+        android:visible="true"
         app:showAsAction="ifRoom" />
 </menu>
