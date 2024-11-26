@@ -4,28 +4,28 @@
     <item
         android:id="@+id/cursos"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/cursos"
         android:title="Cursos"
         android:visible="true"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/meusCursos"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/meuscursos"
         android:title="Meus Cursos"
         android:visible="true"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/progresso"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/progresso"
         android:title="Progresso"
         android:visible="true"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/perfil"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/perfil"
         android:title="Perfil"
         android:visible="true"
         app:showAsAction="ifRoom" />
