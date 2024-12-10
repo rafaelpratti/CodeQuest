@@ -31,7 +31,7 @@
             android:name=".activities.DetalhesCursoActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.CursosActivity"
+            android:name=".activities.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".activities.CadastroActivity"
