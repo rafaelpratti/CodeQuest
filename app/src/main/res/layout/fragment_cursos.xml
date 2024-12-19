@@ -8,4 +8,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="356dp"
+        android:layout_height="396dp"
+        android:text="lorem ipsum"
+        android:textSize="96sp" />
 </FrameLayout>
