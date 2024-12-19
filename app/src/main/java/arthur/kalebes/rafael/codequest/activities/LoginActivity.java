@@ -37,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
                 String email = etEmail.getText().toString();
                 if(email.isEmpty()){
                     Toast.makeText(LoginActivity.this, "Login não preenchido", Toast.LENGTH_LONG);
+                    return;
 
                 }
 
