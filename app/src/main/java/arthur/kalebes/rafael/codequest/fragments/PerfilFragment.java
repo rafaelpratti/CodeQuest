@@ -1,5 +1,8 @@
 package arthur.kalebes.rafael.codequest.fragments;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +10,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import arthur.kalebes.rafael.codequest.R;
+import arthur.kalebes.rafael.codequest.activities.LoginActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,12 +60,67 @@ public class PerfilFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
+
     }
 
+
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_perfil, container, false);
+
+        Button btnEncerrar = view.findViewById(R.id.btnEncerrar_sessao);
+
+        btnEncerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Limpar os dados do usuário em SharedPreferences
+                SharedPreferences mPrefs = getActivity().getSharedPreferences("configs", Context.MODE_PRIVATE);
+                SharedPreferences.Editor mEditor = mPrefs.edit();
+                mEditor.clear(); // Remove todos os dados
+                mEditor.commit(); // Aplica as mudanças
+
+                // Navegar para a LoginActivity
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+
+                // Finalizar a atividade atual
+                getActivity().finish();
+            }
+        });
+
+
+        /*
+        btnEncerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navegar para a outra Activity
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });*/
+
+        return view;
+    }
+/*
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+        Button btnEncerrar = view.findViewById(R.id.btnEncerrar_sessao);
+        btnEncerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navegar para a outra Activity
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
         return inflater.inflate(R.layout.fragment_perfil, container, false);
-    }
+    }*/
 }
