@@ -15,6 +15,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import arthur.kalebes.rafael.codequest.R;
+import arthur.kalebes.rafael.codequest.util.Config;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -68,6 +69,9 @@ public class CadastroActivity extends AppCompatActivity {
                     Toast.makeText(CadastroActivity.this, "Senhas não conferem", Toast.LENGTH_LONG).show();
                     return;
                 }
+
+                Config.setLogin(CadastroActivity.this, email);
+                Config.setPassword(CadastroActivity.this, senha);
 
                 Toast.makeText(CadastroActivity.this, "Cadastro realizado com sucesso!", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(CadastroActivity.this, HomeActivity.class);

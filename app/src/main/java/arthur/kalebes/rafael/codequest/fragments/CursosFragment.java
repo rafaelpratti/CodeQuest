@@ -1,5 +1,8 @@
 package arthur.kalebes.rafael.codequest.fragments;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +10,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import arthur.kalebes.rafael.codequest.R;
+import arthur.kalebes.rafael.codequest.activities.LoginActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -62,5 +67,6 @@ public class CursosFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_cursos, container, false);
+
     }
 }
